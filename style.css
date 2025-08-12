@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    .hero {
+        width: 100vw;
+        height: 10vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        padding: 0 1em;
+    }
+
+    .logo {
+        color: white;
+        font-size: 40px;
+    }
+
+    .container {
+        height: 90vh;
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .user, .seller, .delivery {
+        margin: 1.5em;
+        display: flex;
+        align-items: center;
+        border-radius: 0.75em;
+        text-decoration: none;
+        
+    }
+
+    .user-left, .seller-left, .delivery-left {
+        flex-basis: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .user-right, .seller-right, .delivery-right {
+        flex-basis: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .user {
+        background-color: rgb(223, 255, 255);
+    }
+    .seller {
+        background-color: rgb(214, 250, 214);
+    }
+    .delivery {
+        background-color: rgb(255, 255, 201);
+    }
+
+    .user-left { color: blue; }
+    .seller-left { color: green; }
+    .delivery-left { color: brown; }
+
+    .user-right { color: blue; }
+    .seller-right { color: green; }
+    .delivery-right { color: brown; }
+}
