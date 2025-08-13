@@ -1,0 +1,44 @@
+import { useState } from 'react';
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+    <div class="hero">
+        <div class="logo">logo</div>
+        <div class="menubar"></div>
+    </div>
+
+    <div class="container">
+        <a href="Userlogin.html" class="user">
+            <div class="user-left">
+                <i class="fa-solid fa-user fa-2x"></i>
+            </div>
+            <div class="user-right">
+                USER LOGIN
+            </div>
+        </a>
+
+        <a href="Sellerlogin.html" class="seller">
+            <div class="seller-left">
+                <i class="fa-solid fa-store fa-2x"></i>
+            </div>
+            <div class="seller-right">
+                SELLER LOGIN
+            </div>
+        </a>
+
+        <a href="Deliverylogin.html" class="delivery">
+            <div class="delivery-left">
+                <i class="fa-solid fa-motorcycle fa-2x"></i>
+            </div>
+            <div class="delivery-right">
+                DELIVERY LOGIN
+            </div>
+        </a>
+    </div>
+    </>
+  )
+}
+
+export default App
