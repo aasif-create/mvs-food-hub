@@ -6,16 +6,6 @@ import DishOverview from "./DishOverview";
 const COOKS = [
   {
     id: 1,
-    name: "Chef Ananya",
-    review: 4.8,
-    profilePic: "/images/cook1.jpg",
-    dishes: [
-      { cookName: "Chef Ananya", name: "Paneer Butter Masala", image: "/images/dish1.jpg", review: 4.9, price: 250, description:"Rich creamy paneer in tomato gravy." },
-      { cookName: "Chef Ananya", name: "Masala Dosa", image: "/images/dish3.jpg", review: 4.7, price: 150, description:"Crispy dosa filled with spiced potatoes." }
-    ]
-  },
-  {
-    id: 2,
     name: "Chef Rahul",
     review: 4.6,
     profilePic: "/images/cook2.jpg",
@@ -25,13 +15,123 @@ const COOKS = [
     ]
   },
   {
-    id: 3,
-    name: "Chef Meera",
-    review: 4.9,
-    profilePic: "/images/cook3.jpg",
+    id: 2,
+    name: "Chef Arjun",
+    review: 4.7,
+    profilePic: "/images/cook4.jpg",
     dishes: [
-      { cookName: "Chef Meera", name: "Veg Thali", image: "/images/dish5.jpg", review: 4.8, price: 180, description:"A complete vegetarian meal platter." },
-      { cookName: "Chef Meera", name: "Paneer Tikka", image: "/images/dish6.jpg", review: 4.7, price: 220, description:"Grilled paneer with spicy marinade." }
+      { cookName: "Chef Arjun", name: "Mutton Rogan Josh", image: "/images/dish9.jpg", review: 4.8, price: 350, description:"Kashmiri-style lamb curry with rich spices." },
+      { cookName: "Chef Arjun", name: "Butter Naan", image: "/images/dish10.jpg", review: 4.6, price: 60, description:"Soft and fluffy naan with butter glaze." }
+    ]
+  },
+  {
+    id: 3,
+    name: "Chef Vikram",
+    review: 4.5,
+    profilePic: "/images/cook5.jpg",
+    dishes: [
+      { cookName: "Chef Vikram", name: "Fish Curry", image: "/images/dish11.jpg", review: 4.7, price: 280, description:"South Indian style tangy fish curry." },
+      { cookName: "Chef Vikram", name: "Prawn Fry", image: "/images/dish12.jpg", review: 4.6, price: 320, description:"Crispy golden prawn fry with spices." }
+    ]
+  },
+  {
+    id: 4,
+    name: "Chef Ramesh",
+    review: 4.8,
+    profilePic: "/images/cook6.jpg",
+    dishes: [
+      { cookName: "Chef Ramesh", name: "Dal Tadka", image: "/images/dish13.jpg", review: 4.8, price: 120, description:"Yellow lentils tempered with ghee & spices." },
+      { cookName: "Chef Ramesh", name: "Aloo Paratha", image: "/images/dish14.jpg", review: 4.7, price: 90, description:"Stuffed potato paratha with butter." }
+    ]
+  },
+  {
+    id: 5,
+    name: "Chef Karan",
+    review: 4.9,
+    profilePic: "/images/cook7.jpg",
+    dishes: [
+      { cookName: "Chef Karan", name: "Chole Bhature", image: "/images/dish15.jpg", review: 4.9, price: 160, description:"Punjabi chickpeas curry with fluffy bhature." },
+      { cookName: "Chef Karan", name: "Rajma Chawal", image: "/images/dish16.jpg", review: 4.7, price: 140, description:"Red kidney beans curry served with rice." }
+    ]
+  },
+  {
+    id: 6,
+    name: "Chef Sandeep",
+    review: 4.6,
+    profilePic: "/images/cook8.jpg",
+    dishes: [
+      { cookName: "Chef Sandeep", name: "Egg Curry", image: "/images/dish17.jpg", review: 4.6, price: 150, description:"Spiced boiled eggs in rich tomato gravy." },
+      { cookName: "Chef Sandeep", name: "Chicken Curry", image: "/images/dish18.jpg", review: 4.7, price: 280, description:"Classic home-style chicken curry." }
+    ]
+  },
+  {
+    id: 7,
+    name: "Chef Manish",
+    review: 4.8,
+    profilePic: "/images/cook9.jpg",
+    dishes: [
+      { cookName: "Chef Manish", name: "Keema Pav", image: "/images/dish19.jpg", review: 4.8, price: 200, description:"Spicy minced mutton served with pav." },
+      { cookName: "Chef Manish", name: "Bhindi Fry", image: "/images/dish20.jpg", review: 4.6, price: 130, description:"Crispy fried okra with spices." }
+    ]
+  },
+  {
+    id: 8,
+    name: "Chef Sameer",
+    review: 4.7,
+    profilePic: "/images/cook10.jpg",
+    dishes: [
+      { cookName: "Chef Sameer", name: "Kadhi Pakora", image: "/images/dish21.jpg", review: 4.7, price: 140, description:"Gram flour dumplings in yogurt-based curry." },
+      { cookName: "Chef Sameer", name: "Baingan Bharta", image: "/images/dish22.jpg", review: 4.8, price: 160, description:"Smoky roasted eggplant curry." }
+    ]
+  },
+  {
+    id: 9,
+    name: "Chef Mohan",
+    review: 4.6,
+    profilePic: "/images/cook11.jpg",
+    dishes: [
+      { cookName: "Chef Mohan", name: "Kebab Platter", image: "/images/dish23.jpg", review: 4.8, price: 400, description:"Assorted grilled kebabs." },
+      { cookName: "Chef Mohan", name: "Mutton Korma", image: "/images/dish24.jpg", review: 4.7, price: 350, description:"Rich and creamy Mughlai mutton curry." }
+    ]
+  },
+  {
+    id: 10,
+    name: "Chef Ajay",
+    review: 4.5,
+    profilePic: "/images/cook12.jpg",
+    dishes: [
+      { cookName: "Chef Ajay", name: "Veg Pulao", image: "/images/dish25.jpg", review: 4.6, price: 180, description:"Aromatic vegetable rice with spices." },
+      { cookName: "Chef Ajay", name: "Chana Masala", image: "/images/dish26.jpg", review: 4.7, price: 160, description:"Chickpeas cooked in tomato-onion gravy." }
+    ]
+  },
+  {
+    id: 11,
+    name: "Chef Naveen",
+    review: 4.7,
+    profilePic: "/images/cook13.jpg",
+    dishes: [
+      { cookName: "Chef Naveen", name: "Malai Kofta", image: "/images/dish27.jpg", review: 4.8, price: 240, description:"Fried cottage cheese dumplings in creamy gravy." },
+      { cookName: "Chef Naveen", name: "Jeera Rice", image: "/images/dish28.jpg", review: 4.6, price: 120, description:"Basmati rice cooked with cumin seeds." }
+    ]
+  },
+  {
+    id: 12,
+    name: "Chef Rohit",
+    review: 4.8,
+    profilePic: "/images/cook14.jpg",
+    dishes: [
+      { cookName: "Chef Rohit", name: "Shahi Paneer", image: "/images/dish29.jpg", review: 4.9, price: 260, description:"Paneer in royal cashew-based gravy." },
+      { cookName: "Chef Rohit", name: "Veg Manchurian", image: "/images/dish30.jpg", review: 4.7, price: 220, description:"Fried veggie balls in tangy Indo-Chinese sauce." }
+    ]
+  },
+  {
+    id: 13,
+    name: "Chef Harish",
+    review: 4.6,
+    profilePic: "/images/cook15.jpg",
+    dishes: [
+      { cookName: "Chef Harish", name: "Palak Paneer", image: "/images/dish31.jpg", review: 4.7, price: 230, description:"Paneer cooked in creamy spinach gravy." },
+      { cookName: "Chef Harish", name: "Gulab Jamun", image: "/images/dish32.jpg", review: 4.9, price: 100, description:"Soft fried dough balls soaked in sugar syrup." }
     ]
   }
 ];
@@ -205,4 +305,5 @@ export default function HomePage() {
     </div>
   );
 }
+
 
