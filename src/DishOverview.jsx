@@ -25,7 +25,7 @@ export default function DishOverview({ dish, onBack }) {
       <section style={{ marginBottom: 20 }}>
         <h2 style={{ margin: "0 0 8px" }}>{dish.name}</h2>
         <p style={{ fontStyle: "italic", color: "#555", marginBottom: 12 }}>
-          {/* Place ingredients or description here */}
+          
           {dish.description ||
             `Enjoy this delicious dish made with fresh ingredients, prepared by ${dish.cookName}.`}
         </p>
@@ -49,3 +49,4 @@ export default function DishOverview({ dish, onBack }) {
     </div>
   );
 }
+
