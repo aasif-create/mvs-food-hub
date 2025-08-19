@@ -3,7 +3,6 @@ import "./Testhome.css";
 import CookProfile from "./CookProfile";
 import DishOverview from "./DishOverview";
 
-/* === NEW COOK JSON STRUCTURE === */
 const COOKS = [
   {
     id: 1,
@@ -37,7 +36,6 @@ const COOKS = [
   }
 ];
 
-/* === Derived Dishes from COOKS === */
 const DISHES = COOKS.flatMap(cook =>
   cook.dishes.map(dish => ({
     dishName: dish.name,
@@ -51,25 +49,21 @@ const DISHES = COOKS.flatMap(cook =>
 );
 
 export default function HomePage() {
-  // Navigation/view state
   const [view, setView] = useState("home"); // 'home', 'cook', 'dish'
   const [selectedCook, setSelectedCook] = useState(null);
   const [selectedDish, setSelectedDish] = useState(null);
 
-  // App state
   const [query, setQuery] = useState("");
   const [showAllCooks, setShowAllCooks] = useState(false);
   const [showAllToday, setShowAllToday] = useState(false);
   const [showAllBest, setShowAllBest] = useState(false);
 
-  /* Filtering cooks */
   const filteredCooks = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return COOKS;
     return COOKS.filter(c => c.name.toLowerCase().includes(q));
   }, [query]);
 
-  /* Filtering dishes */
   const filteredDishes = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return DISHES;
@@ -79,12 +73,12 @@ export default function HomePage() {
     );
   }, [query]);
 
-  /* Visible subsets */
+  
   const cooksToShow = showAllCooks ? filteredCooks : filteredCooks.slice(0, 4);
   const todayToShow = showAllToday ? filteredDishes : filteredDishes.slice(0, 4);
   const bestToShow  = showAllBest  ? filteredDishes : filteredDishes.slice(0, 4);
 
-  // Navigation handlers
+  
   const showCookView = (cook) => {
     setSelectedCook(cook);
     setView("cook");
@@ -99,7 +93,7 @@ export default function HomePage() {
     setSelectedDish(null);
   };
 
-  // Routing to second screen
+  
   if (view === "cook" && selectedCook) {
     return <CookProfile cook={selectedCook} onBack={goHome} onDishSelect={showDishView} />;
   }
@@ -107,7 +101,7 @@ export default function HomePage() {
     return <DishOverview dish={selectedDish} onBack={goHome} />;
   }
 
-  // Main screen
+  
   return (
     <div className="homepage">
       <header className="header">
@@ -131,7 +125,7 @@ export default function HomePage() {
         />
         <button className="search-action" type="button">Search</button>
       </div>
-      {/* Famous Cooks */}
+  
       <section className="section">
         <div className="section-head">
           <h2>Famous Cooks</h2>
@@ -156,7 +150,7 @@ export default function HomePage() {
           </div>
         )}
       </section>
-      {/* Today's Menu */}
+  
       <section className="section">
         <div className="section-head">
           <h2>Today’s Menu</h2>
@@ -182,7 +176,7 @@ export default function HomePage() {
           </div>
         )}
       </section>
-      {/* Best Selling */}
+  
       <section className="section">
         <div className="section-head">
           <h2>Best Selling Dishes</h2>
@@ -211,3 +205,4 @@ export default function HomePage() {
     </div>
   );
 }
+
