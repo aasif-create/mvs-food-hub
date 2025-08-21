@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/*import { useState } from 'react';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -42,3 +42,21 @@ function App() {
 }
 
 export default App
+*/
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './Test_home';
+import CookProfile from './CookProfile';
+import DishOverview from './DishOverview';
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/cook/:id" element={<CookProfile />} />
+      <Route path="/dish/:id" element={<DishOverview />} />
+    </Routes>
+  );
+}
+
+export default App;
