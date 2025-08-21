@@ -23,6 +23,7 @@ users = list(users_collection.find({}))
 
 
 if users:
-    print(type(users))
+    for i in users:
+        print(i)
 else:
     print("No users found in the database.")
